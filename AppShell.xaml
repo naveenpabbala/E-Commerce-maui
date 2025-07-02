@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="E_Commercenaveen.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:E_Commercenaveen"
+    Shell.FlyoutBehavior="Flyout"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:pages="clr-namespace:E_Commercenaveen.Pages"
+    Shell.TabBarBackgroundColor="{StaticResource Mid}"
+    Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.TabBarForegroundColor="{StaticResource White}"
+    Shell.BackgroundColor="{StaticResource Mid}"
+    Title="E_Commercenaveen">
+
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
+    </Shell.Behaviors>
+    
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <TabBar>
+        <ShellContent Title="Home"
+                      Icon="home.png"
+                      ContentTemplate="{DataTemplate pages:HomePage}"
+                      Route="HomePage"/>
+        <ShellContent Title="Categories"
+                      Icon="categories.png"
+                      ContentTemplate="{DataTemplate pages:CategoriesPage}"
+                      Route="CategoriesPage"/>
+        <ShellContent Title="Orders"
+                      Icon="orders.png"
+                      ContentTemplate="{DataTemplate pages:OrdersPage}"
+                      Route="OrdersPage"/>
+        <ShellContent Title="Profile"
+                      Icon="profile.png"
+                      ContentTemplate="{DataTemplate pages:ProfilePage}"
+                      Route="ProfilePage"/>
+        <ShellContent Title="Help"
+                      Icon="help.png"
+                      ContentTemplate="{DataTemplate pages:HelpPage}"
+                      Route="HelpPage"/>
+    </TabBar>
+
+</Shell>
+
