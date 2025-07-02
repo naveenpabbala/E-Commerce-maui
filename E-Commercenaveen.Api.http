@@ -1,0 +1,6 @@
+@E_Commercenaveen.Api_HostAddress = http://localhost:5111
+
+GET {{E_Commercenaveen.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
